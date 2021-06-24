@@ -1,0 +1,52 @@
+﻿@page
+@model Web.LuizaAuth.Pages.Account.CreateUserModel
+@{
+}
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="_user.Name"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="_user.Name" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="_user.Name"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="_user.Email"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="_user.Email" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="_user.Email"></span>
+        </div>
+        <div class="form-group row">
+            <div style="align-self: center;" class="col-2">
+                <label asp-for="_user.Password"></label>
+            </div>
+            <div class="col-5">
+                <small style="font-size:9px;">A senha deve conter no mínimo 8 caracteres, 1 número, 1 símbolo, 1 letra maíuscula e 1 letra minúscula</small>
+                <input type="password" asp-for="_user.Password" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="_user.Password"></span>
+        </div>        
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="_user.PasswordConfirm"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="_user.PasswordConfirm" class="form-control" />
+            </div>
+            <span class="text-danger" asp-validation-for="_user.PasswordConfirm"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Cadastrar" />
+            </div>
+        </div>
+    </form>
+</div>
